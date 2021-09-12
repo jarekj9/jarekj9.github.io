@@ -19,6 +19,7 @@
 <script>
   
   $("#form1").submit(function(e) {
+    e.preventDefault();
     var form = $(this);
     console.log(form.serialize());
     $.ajax({
