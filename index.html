@@ -15,12 +15,12 @@
   <p id="message"></p>
 
 <script>
-  let messsage = ""
+  let message = "";
   $.ajax({
   url: "https://6ta6rmhaee.execute-api.us-east-2.amazonaws.com/test_env/resource1?var1=xxxx",
   dataType: "json",
   success: function(response) {
-    messsage = response["messsage"];
+    message = response["message"];
     $("#message").innerHTML = message;
     console.log(message);
   }
