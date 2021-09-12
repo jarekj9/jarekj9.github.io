@@ -4,3 +4,15 @@
   <label for="input1">Hmm</label>
   <input type="text" id="input1">
 </form>
+
+<script>
+  $.ajax({
+  url: "https://6ta6rmhaee.execute-api.us-east-2.amazonaws.com/test_env/resource1?var1=xxxx",
+  dataType: "json",
+  success: function(response) {
+    $.each(response, function(item) {
+      console.log(item);
+    });
+  }
+});
+</script>
