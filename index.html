@@ -22,7 +22,7 @@
     var form = $(this);
     console.log(form.serialize());
     $.ajax({
-      url: "https://wj8f6cc9be.execute-api.us-east-2.amazonaws.com//lambda2-httpapi",
+      url: "https://wj8f6cc9be.execute-api.us-east-2.amazonaws.com/lambda2-httpapi",
       dataType: "json",
       data: form.serialize(),
       success: function(response) {
