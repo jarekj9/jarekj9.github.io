@@ -8,18 +8,20 @@
 
 <h1>See, the truth isn't always the most exciting version of things</h1>
 
-<form>
+<form id="form1">
   <label for="input1">Hmm</label>
-  <input type="text" id="input1">
+  <input type="text" id="var1">
 </form>
   <p id="message"></p>
   <p id="var1"></p>
   <p id="previousVar1"></p>
 
 <script>
+  console.log($("#form1").serialize();
   $.ajax({
   url: "https://wj8f6cc9be.execute-api.us-east-2.amazonaws.com//lambda2-httpapi",
   dataType: "json",
+  data: $("#form1").serialize(),
   success: function(response) {
     console.log(response);
     let message = response["message"];
