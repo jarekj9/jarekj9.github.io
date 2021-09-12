@@ -17,14 +17,13 @@
   <p id="previousVar1"></p>
 
 <script>
-  let message = "";
   $.ajax({
   url: "https://6ta6rmhaee.execute-api.us-east-2.amazonaws.com/test_env/resource1?var1=xxxx",
   dataType: "json",
   success: function(response) {
-    message = response["message"];
-    previousVar1 = response["previousVar1"];
-    var1 = response["var1"];
+    let message = response["message"];
+    let previousVar1 = response["previousVar1"];
+    let var1 = response["var1"];
     $("#message").html(message);
     $("#var1").html('New var1: ' + var1);
     $("#previousVar1").html('Previous var1: ' + previousVar1);
