@@ -13,6 +13,8 @@
   <input type="text" id="input1">
 </form>
   <p id="message"></p>
+  <p id="var1"></p>
+  <p id="previousVar1"></p>
 
 <script>
   let message = "";
@@ -21,7 +23,11 @@
   dataType: "json",
   success: function(response) {
     message = response["message"];
+    previousVar1 = response["previousVar1"];
+    var1 = response["var1"];
     $("#message").html(message);
+    $("#var1").html('New var1: ' + var1);
+    $("#previousVar1").html('Previous var1: ' + previousVar1);
   }
 });
 
