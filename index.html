@@ -21,8 +21,7 @@
   dataType: "json",
   success: function(response) {
     message = response["message"];
-    $("#message").innerHTML = message;
-    console.log(message);
+    $("#message").html(message);
   }
 });
 
