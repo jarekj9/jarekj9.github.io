@@ -21,6 +21,7 @@
   url: "https://6ta6rmhaee.execute-api.us-east-2.amazonaws.com/test_env/resource1?var1=xxxx",
   dataType: "json",
   success: function(response) {
+    console.log(response);
     let message = response["message"];
     let previousVar1 = response["previousVar1"];
     let var1 = response["var1"];
