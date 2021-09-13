@@ -12,8 +12,6 @@
   <label for="input1">Hmm</label>
   <input type="text" id="var1" name="var1">
 </form>
-  <p id="message"></p>
-  <p id="var1"></p>
   <p id="all"></p>
 
 <script>
@@ -48,8 +46,6 @@
         all.forEach(function (item, index) {
           items += item.var1 + "<br />";
         });
-        $("#message").html(message);
-        $("#var1").html('New var1: ' + var1);
         $("#all").html(items);
       }
     });
