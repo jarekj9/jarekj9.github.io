@@ -15,6 +15,7 @@
   <p id="message"></p>
   <p id="var1"></p>
   <p id="previousVar1"></p>
+  <p id="all"></p>
 
 <script>
   
@@ -29,11 +30,19 @@
       success: function(response) {
         console.log(response);
         let message = response["message"];
-        let previousVar1 = response["previousVar1"];
+        let all = response["all"];
         let var1 = response["var1"];
+        let items = "";
+        all.forEach(function (item, index) {
+          items += item.var1 + <br />;
+        });
+        
+        
         $("#message").html(message);
         $("#var1").html('New var1: ' + var1);
-        $("#previousVar1").html('Previous var1: ' + previousVar1);
+        $("#all").html(items);
+
+    
       }
     });
   });
